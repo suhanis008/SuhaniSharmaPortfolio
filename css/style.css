@@ -1183,3 +1183,12 @@ video {
   display: block;
   background: #f8f5ef;
 }
+
+/* Center final research card when there are three cards */
+
+.centered-research-card {
+  grid-column: 1 / -1;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+}
