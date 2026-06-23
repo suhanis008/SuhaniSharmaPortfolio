@@ -1192,3 +1192,19 @@ video {
   margin: 0 auto;
   width: 100%;
 }
+
+/* Center PRAYAAS card on research page */
+
+.research-card-grid .centered-research-card {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 24px) / 2);
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .research-card-grid .centered-research-card {
+    width: 100%;
+  }
+}
