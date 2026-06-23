@@ -1208,3 +1208,95 @@ video {
     width: 100%;
   }
 }
+
+/* Résumé page */
+
+.resume-hero {
+  margin: 42px auto 28px;
+}
+
+.resume-hero-card {
+  padding: 44px 52px;
+}
+
+.resume-hero-card h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  margin-bottom: 18px;
+}
+
+.resume-hero-card p {
+  max-width: 840px;
+  font-size: 21px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.resume-section {
+  max-width: 980px;
+  margin: 0 auto 90px;
+  padding: 0 28px;
+}
+
+.resume-viewer {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 980px;
+  border: none;
+  border-radius: 18px;
+  background: white;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .resume-hero {
+    margin-top: 38px;
+  }
+
+  .resume-hero-card {
+    padding: 34px 24px;
+  }
+
+  .resume-hero-card h1 {
+    font-size: 46px;
+  }
+
+  .resume-hero-card p {
+    font-size: 18px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+  }
+
+  .resume-actions .button {
+    text-align: center;
+  }
+
+  .resume-section {
+    padding: 0 16px;
+  }
+
+  .resume-viewer {
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .resume-viewer iframe {
+    height: 720px;
+    border-radius: 14px;
+  }
+}
