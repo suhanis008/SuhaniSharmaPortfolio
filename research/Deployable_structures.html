@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Deployable Structures | Suhani Sharma</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Suhani Sharma</a>
+
+      <ul class="nav-links">
+        <li><a href="../about/">About</a></li>
+        <li><a href="../research/">Research</a></li>
+        <li><a href="../fabrication/">Fabrication</a></li>
+        <li><a href="../art/">Art</a></li>
+        <li><a href="../music/">Music</a></li>
+        <li><a href="../sustainability/">Sustainability</a></li>
+        <li><a href="../sports/">Sports</a></li>
+        <li><a href="../writing/">Writing</a></li>
+        <li><a href="../resume/">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="project-hero">
+      <div class="project-hero-card">
+        <p class="eyebrow">research / deployable structures</p>
+
+        <h1>Deployable Structures</h1>
+
+        <p>
+          This project started at the
+          <a href="https://www.cee.org/programs/research-science-institute" target="_blank" class="text-link">
+            Research Science Institute (RSI)
+          </a>,
+          where I worked on a way to turn flat polyhedral nets into 3D structures
+          using hinges and threads. I called the method hinged threading.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-layout">
+
+      <article class="project-main">
+
+        <h2>How it started</h2>
+
+        <p>
+          I had been interested in origami and transformable structures before RSI, but
+          this project was the first time I connected that interest to a formal research
+          problem. I worked on deployable structures, which are systems that can move
+          between different geometric configurations.
+        </p>
+
+        <p>
+          The question I worked on was: if a polyhedron is cut open into a flat net,
+          can a thread be routed through that net so that pulling the thread
+          <em>efficiently</em> brings it back into its 3D shape?
+        </p>
+
+        <h2>Early inspiration</h2>
+
+        <p>
+          Before RSI, one of the things that got me interested in deployable structures
+          was origami and especially flasher models, which fold compactly and then open
+          out in a controlled way.
+        </p>
+
+        <div class="project-video">
+          <video controls>
+            <source src="../assets/images/flasher.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>The idea</h2>
+
+        <p>
+          A deployable structure is something that can move between different shapes or
+          configurations. The version I worked on uses a flat net of a polyhedron. The
+          goal is to thread the net in a way that lets it pull up into the intended 3D
+          structure.
+        </p>
+
+
+        <h2>What I did</h2>
+
+        <p>
+          I looked at the problem using graph threading. In graph threading, a thread is
+          passed through a collection of pieces so that changing the tension changes the
+          structure’s configuration. More formally, a threading can be thought of as a
+          closed walk through a graph that visits the required vertices and edges without
+          making unnecessary U-turns.
+        </p>
+        <p>
+          The method I explored combines hinges and threads. Hinges keep the faces ordered
+          and give them a path to rotate along. Threads make the structure easier to move
+          because pulling the thread can guide the flat net into shape.
+        </p>
+
+        <figure class="concept-figure">
+          <img src="../assets/images/idea.png" alt="Diagram showing thread, hole, and hinge">
+          <figcaption>
+            Basic idea of hinged threading: the thread passes through holes while hinges guide the movement of the faces.
+          </figcaption>
+        </figure>
+
+        <p>
+          I called this method <em>hinged threading</em>. The main challenge was finding a
+          good threading path. Too many turns in the thread increase friction, and too much
+          thread makes the structure harder and more expensive to build.
+        </p>
+        <p>
+          For normal graph threading, every edge needs to be covered and every junction
+          graph should be connected. Pull-up nets are a little different. The thread does
+          not need to travel along every edge of the net. Instead, the important thing is
+          whether the faces can come together correctly at the corners of the polyhedron.
+        </p>
+
+        <div class="two-image-row">
+          <figure>
+            <img src="../assets/images/graph_threading.png" alt="Normal graph threading diagram">
+            <figcaption>Normal graph threading.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/allowed_hinged_threading.png" alt="Allowed hinged threading diagram">
+            <figcaption>Allowed hinged threading.</figcaption>
+          </figure>
+        </div>
+
+        <p>
+          I defined the corners, holes, and hinged connections of a net, then used that
+          structure to decide where threading was actually needed. Corners with fewer
+          hinged connections needed more help from the thread. Corners with more hinged
+          connections were already partly guided by the hinges.
+        </p>
+
+        <p>
+          Based on this, I developed an algorithm for choosing efficient threading
+          points. The aim was to reduce the number of thread turns, which lowers friction,
+          and also reduce thread length where possible.
+        </p>
+
+        <h2>Building and testing</h2>
+
+        <p>
+          To test the idea, I designed and laser-cut nets, added hinges, threaded them,
+          and checked whether they could pull up into the intended shape. I tested cube
+          nets, a pentagonal prism, a dodecahedron, and an icosahedron.
+        </p>
+
+        <section class="gallery-section">
+          <h3>Cube nets</h3>
+
+          <div class="clean-gallery cube-gallery">
+            <figure>
+              <img src="../assets/images/cube_net1.png" alt="Cube net 1">
+              <figcaption>Net 1</figcaption>
+            </figure>
+
+            <figure>
+              <img src="../assets/images/cube_net2.png" alt="Cube net 2">
+              <figcaption>Net 2</figcaption>
+            </figure>
+
+            <figure>
+              <img src="../assets/images/cube_net3.png" alt="Cube net 3">
+              <figcaption>Net 3</figcaption>
+            </figure>
+
+            <figure>
+              <img src="../assets/images/cube_net4.png" alt="Cube net 4">
+              <figcaption>Net 4</figcaption>
+            </figure>
+
+            <figure>
+              <img src="../assets/images/cube_net5.png" alt="Cube net 5">
+              <figcaption>Net 5</figcaption>
+            </figure>
+          </div>
+
+          <p class="gallery-caption">
+            Fig. 13: Threaded hinged nets for a cube.
+          </p>
+        </section>
+
+        <section class="gallery-section">
+          <h3>Other polyhedra</h3>
+
+          <div class="clean-gallery shape-gallery">
+            <figure>
+              <img src="../assets/images/pentagonal_prism.png" alt="Pentagonal prism net">
+              <figcaption>Pentagonal Prism</figcaption>
+            </figure>
+
+            <figure>
+              <img src="../assets/images/dodecahedron.png" alt="Dodecahedron net">
+              <figcaption>Dodecahedron</figcaption>
+            </figure>
+
+            <figure>
+              <img src="../assets/images/icosahedron.png" alt="Icosahedron net">
+              <figcaption>Icosahedron</figcaption>
+            </figure>
+          </div>
+
+          <p class="gallery-caption">
+            Fig. 14: Threaded hinged nets for various polyhedra.
+          </p>
+        </section>
+
+        <section class="gallery-section table-section">
+          <h3>Friction analysis</h3>
+
+          <img src="../assets/images/table.jpg" alt="Analysis table for different nets and polyhedra">
+
+          <p class="gallery-caption">
+            Table 1: Analysis of frictional force and thread length in different nets and polyhedra.
+          </p>
+        </section>
+
+        <p>
+          A lot of the work was iterative. Some hinges detached. Some nets were much
+          harder to pull than others. That ended up being useful because it helped me
+          compare lower-friction and higher-friction nets based on how many holes needed
+          to be threaded.
+        </p>
+
+        <h2>Video</h2>
+
+        <p>
+          This video shows the models folding from a flat net into a 3D structure.
+        </p>
+
+        <div class="project-video">
+          <video controls>
+            <source src="../assets/images/folding.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Future applications</h2>
+
+        <p>
+          Deployable structures are useful when something needs to be transported compactly
+          and opened quickly.
+        </p>
+
+        <div class="application-gallery">
+          <figure>
+            <img src="../assets/images/starshade.png" alt="Deployable starshade structure">
+            <figcaption>
+              Space applications, such as deployable starshade-like structures, depend on compact storage and controlled expansion.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/deployable_shelter.png" alt="Deployable shelter structure">
+            <figcaption>
+              On Earth, deployable systems can be useful for temporary shelters, field structures, and disaster relief.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          For this to become more practical, the hardware still needs work. Better hinges,
+          lower-friction threading paths, and multi-threaded designs could make the motion
+          smoother and easier to control.
+        </p>
+
+        <h2>Where it went</h2>
+
+        <p>
+          My RSI presentation was selected as one of the
+          <a href="https://www.cee.org/programs/research-science-institute-rsi/distinguished-written-papers-and-oral-presentations" target="_blank" class="text-link">
+            top 5 oral presentations
+          </a>
+          among the RSI scholars.
+        </p>
+
+        <p>
+          A version of the work, titled <em>Deploying Convex Polyhedral Nets</em>, was
+          presented at
+          <a href="https://www.cs.tufts.edu/research/geometry/FWCG24/" target="_blank" class="text-link">
+            FWCG 2024
+          </a>,
+          the NSF-sponsored Fall Workshop on Computational Geometry at Tufts University.
+        </p>
+
+        <p>
+          I later presented this work at
+          <a href="https://isef.net/project/etsd005-hinged-threading" target="_blank" class="text-link">
+            ISEF
+          </a>,
+          where it won a Grand Award.
+        </p>
+
+        <h2>What I took from it</h2>
+
+        <p>
+          This project made research feel very real to me. It was not just reading papers
+          or writing equations. It was also cutting plywood, threading tiny holes, fixing
+          broken hinges, and trying to understand why one model worked better than another.
+        </p>
+
+        <p>
+          It also showed me that I like work that sits between theory and physical design.
+          The math mattered, but so did the material, the hinge, the thread, and the fact
+          that a model either folded or did not.
+        </p>
+
+      </article>
+
+      <aside class="project-side">
+
+        <div class="side-card">
+          <h3>Project details</h3>
+
+          <ul>
+            <li><strong>Program:</strong> Research Science Institute</li>
+            <li><strong>Lab:</strong> MIT CSAIL</li>
+            <li>
+              <strong>Mentor:</strong>
+              <a href="https://www.csail.mit.edu/person/timothy-gomez" target="_blank" class="text-link">
+                Timothy Gomez
+              </a>
+            </li>
+            <li>
+              <strong>PI:</strong>
+              <a href="https://erikdemaine.org/" target="_blank" class="text-link">
+                Dr. Erik Demaine
+              </a>
+            </li>
+            <li><strong>Area:</strong> Deployable structures, graph threading, fabrication</li>
+          </ul>
+        </div>
+
+        <div class="side-card soft">
+          <h3>Recognition</h3>
+
+          <ul>
+            <li>
+              Selected as one of RSI’s
+              <a href="https://www.cee.org/programs/research-science-institute-rsi/distinguished-written-papers-and-oral-presentations" target="_blank" class="text-link">
+                top 5 oral presentations
+              </a>
+            </li>
+
+            <li>
+              Presented at
+              <a href="https://www.cs.tufts.edu/research/geometry/FWCG24/" target="_blank" class="text-link">
+                FWCG 2024
+              </a>
+              at Tufts University
+            </li>
+
+            <li>
+              Won an
+              <a href="https://isef.net/project/etsd005-hinged-threading" target="_blank" class="text-link">
+                ISEF Grand Award
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>Downloads</h3>
+
+          <ul class="download-list">
+            <li>
+              Download the
+              <a href="../assets/documents/FWCG_24_paper_29.pdf" download class="text-link">
+                FWCG paper
+              </a>
+            </li>
+
+            <li>
+              Download the
+              <a href="../assets/documents/Sharma_Suhani_Shuvom_Final.pdf" download class="text-link">
+                RSI paper
+              </a>
+            </li>
+
+            <li>
+              Download the
+              <a href="../assets/images/ISEF_Poster.png" download class="text-link">
+                ISEF poster
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Suhani Sharma.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
