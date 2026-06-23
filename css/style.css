@@ -743,7 +743,7 @@ video {
   padding: 0;
 }
 
-/* Video */
+/* Videos */
 
 .project-video {
   margin: 24px 0 34px;
@@ -757,6 +757,47 @@ video {
 .project-video video {
   width: 100%;
   border-radius: 16px;
+  display: block;
+}
+
+/* Practical applications image gallery */
+
+.application-gallery {
+  margin: 28px 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  clear: both;
+}
+
+.application-gallery figure {
+  margin: 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.application-gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.application-gallery figcaption {
+  margin-top: 11px;
+  font-size: 15px;
+  color: #6a625c;
+  font-style: italic;
+  text-align: center;
+}
+
+.application-gallery + p {
+  clear: both;
   display: block;
 }
 
@@ -906,7 +947,8 @@ video {
 
   .two-image-row,
   .cube-gallery,
-  .shape-gallery {
+  .shape-gallery,
+  .application-gallery {
     grid-template-columns: 1fr;
   }
 
@@ -919,7 +961,8 @@ video {
   }
 
   .clean-gallery img,
-  .two-image-row img {
+  .two-image-row img,
+  .application-gallery img {
     height: 220px;
   }
 
@@ -931,57 +974,5 @@ video {
   .concept-figure,
   .two-image-row figure {
     padding: 16px;
-  }
-}
-
-/* Practical applications image gallery */
-
-.application-gallery {
-  margin: 28px 0 32px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  clear: both;
-}
-
-.application-gallery figure {
-  margin: 0;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(138, 111, 77, 0.12);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.application-gallery img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-}
-
-.application-gallery figcaption {
-  margin-top: 11px;
-  font-size: 15px;
-  color: #6a625c;
-  font-style: italic;
-  text-align: center;
-}
-
-/* Make sure paragraphs after the gallery do not sit beside images */
-.application-gallery + p {
-  clear: both;
-  display: block;
-}
-
-@media (max-width: 700px) {
-  .application-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .application-gallery img {
-    height: 220px;
   }
 }
