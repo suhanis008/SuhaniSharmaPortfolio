@@ -321,7 +321,7 @@ video {
   color: #555;
 }
 
-/* Interior page hero */
+/* Interior and project heroes */
 
 .page-hero,
 .project-hero {
@@ -586,7 +586,7 @@ video {
   gap: 18px;
 }
 
-/* Deployable Structures: concept diagrams */
+/* Deployable Structures diagrams */
 
 .concept-figure {
   margin: 26px 0;
@@ -646,7 +646,7 @@ video {
   font-style: italic;
 }
 
-/* Deployable Structures: galleries */
+/* Deployable Structures galleries */
 
 .gallery-section {
   margin: 32px 0;
@@ -801,6 +801,131 @@ video {
   display: block;
 }
 
+/* Ecologs page */
+
+.ecolog-media {
+  margin: 28px 0 32px;
+}
+
+.ecolog-media figure,
+.ecolog-two-image-row figure {
+  margin: 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.ecolog-media img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.ecolog-media figcaption,
+.ecolog-two-image-row figcaption {
+  margin-top: 11px;
+  font-size: 15px;
+  color: #6a625c;
+  font-style: italic;
+  text-align: center;
+}
+
+.ecolog-two-image-row {
+  margin: 28px 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.ecolog-two-image-row img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* YouTube thumbnail cards */
+
+.video-thumbnail-grid {
+  margin: 24px 0 34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.video-thumbnail-card {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  background: rgba(255, 244, 246, 0.92);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  transition: 0.2s ease;
+}
+
+.video-thumbnail-card:hover {
+  transform: translateY(-4px);
+  background: rgba(247, 200, 208, 0.5);
+}
+
+.thumbnail-wrap {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.thumbnail-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 54px;
+  height: 54px;
+  transform: translate(-50%, -50%);
+  background: rgba(138, 111, 77, 0.88);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  padding-left: 4px;
+}
+
+.video-card-text {
+  padding: 18px 20px 22px;
+}
+
+.video-card-text span {
+  display: block;
+  margin-bottom: 8px;
+  color: #6a625c;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.video-card-text strong {
+  display: block;
+  color: var(--brown);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
 /* Footer */
 
 .site-footer {
@@ -948,7 +1073,9 @@ video {
   .two-image-row,
   .cube-gallery,
   .shape-gallery,
-  .application-gallery {
+  .application-gallery,
+  .ecolog-two-image-row,
+  .video-thumbnail-grid {
     grid-template-columns: 1fr;
   }
 
@@ -962,7 +1089,9 @@ video {
 
   .clean-gallery img,
   .two-image-row img,
-  .application-gallery img {
+  .application-gallery img,
+  .ecolog-media img,
+  .ecolog-two-image-row img {
     height: 220px;
   }
 
@@ -970,9 +1099,87 @@ video {
     max-height: 280px;
   }
 
+  .thumbnail-wrap {
+    height: 220px;
+  }
+
   .gallery-section,
   .concept-figure,
   .two-image-row figure {
     padding: 16px;
   }
+}
+
+/* Specific Ecologs image positioning */
+.setup-photo {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.machine-photo {
+  object-fit: cover;
+  object-position: left center;
+}
+
+.ecolog-media {
+  margin: 28px 0 32px;
+}
+
+.ecolog-media figure,
+.ecolog-two-image-row figure {
+  margin: 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.ecolog-two-image-row {
+  margin: 28px 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.ecolog-media figcaption,
+.ecolog-two-image-row figcaption {
+  margin-top: 11px;
+  font-size: 15px;
+  color: #6a625c;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Default ecolog images */
+.ecolog-two-image-row img {
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  display: block;
+  background: #f8f5ef;
+}
+
+/* FIRST IMAGE: show whole setup + your face + table */
+.setup-photo {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 16px;
+  display: block;
+  background: #f8f5ef;
+
+}
+
+/* SECOND IMAGE: show more of the machine on the right */
+.machine-photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: right center;
+  border-radius: 16px;
+  display: block;
+  background: #f8f5ef;
 }
