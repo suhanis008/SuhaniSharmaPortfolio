@@ -1729,3 +1729,14 @@ video {
     padding: 22px;
   }
 }
+
+.side-card a.side-link {
+  color: #8b6f47;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.side-card a.side-link:hover {
+  color: #6f5635;
+}
