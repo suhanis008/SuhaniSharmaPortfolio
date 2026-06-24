@@ -1489,3 +1489,11 @@ video {
     border-radius: 14px;
   }
 }
+
+/* Drawing Machine page */
+
+.drawing-machine-image img {
+  max-height: 480px;
+  object-fit: contain;
+  background: #fffdf8;
+}
