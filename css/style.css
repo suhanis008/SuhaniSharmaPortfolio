@@ -1571,3 +1571,17 @@ video {
     height: 230px;
   }
 }
+
+/* Networking page */
+
+.networking-circuit-image {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.networking-circuit-image img {
+  max-height: 520px;
+  object-fit: contain;
+  background: #fffdf8;
+}
