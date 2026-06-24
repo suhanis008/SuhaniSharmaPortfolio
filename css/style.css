@@ -1671,3 +1671,61 @@ video {
     max-height: 420px;
   }
 }
+
+/* Fabrication index image cards */
+
+.fabrication-image-card-grid {
+  align-items: stretch;
+}
+
+.fabrication-card.image-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+}
+
+.fabrication-card-image {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.fabrication-card-content {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fabrication-card-content span {
+  margin-bottom: 10px;
+}
+
+.fabrication-card-content h2 {
+  margin-bottom: 12px;
+}
+
+.fabrication-card-content p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .fabrication-card.image-card {
+    min-height: auto;
+  }
+
+  .fabrication-card-image {
+    height: 220px;
+  }
+
+  .fabrication-card-content {
+    padding: 22px;
+  }
+}
