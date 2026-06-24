@@ -1657,3 +1657,17 @@ video {
     max-height: 360px;
   }
 }
+
+/* Wooden Box page */
+
+.wooden-box-video video {
+  max-height: 620px;
+  object-fit: contain;
+  background: #fffdf8;
+}
+
+@media (max-width: 700px) {
+  .wooden-box-video video {
+    max-height: 420px;
+  }
+}
