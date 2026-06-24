@@ -161,7 +161,7 @@ video {
   background-color: var(--blue);
 }
 
-/* Homepage hero */
+/* Homepage */
 
 .hero {
   max-width: 1180px;
@@ -226,8 +226,6 @@ video {
   flex-wrap: wrap;
 }
 
-/* Homepage headshot */
-
 .hero-photo-area {
   display: flex;
   flex-direction: column;
@@ -260,8 +258,6 @@ video {
   color: var(--brown);
   font-style: italic;
 }
-
-/* Homepage sections */
 
 .section-intro {
   max-width: 760px;
@@ -436,8 +432,6 @@ video {
   font-size: 16.5px;
 }
 
-/* About hero image */
-
 .about-hero-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
@@ -569,6 +563,14 @@ video {
   max-width: 520px;
 }
 
+.research-card-grid .centered-research-card {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 24px) / 2);
+  max-width: none;
+  margin: 0;
+}
+
 /* Project pages */
 
 .project-layout {
@@ -644,6 +646,46 @@ video {
   font-size: 15px;
   color: #6a625c;
   font-style: italic;
+}
+
+/* Two small prototype videos */
+
+.two-video-row {
+  margin: 26px 0 34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.two-video-row figure {
+  margin: 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.two-video-row video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  background: #fffdf8;
+}
+
+.square-video {
+  object-position: 25% center;
+}
+
+.two-video-row figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #6a625c;
+  font-style: italic;
+  text-align: center;
 }
 
 /* Deployable Structures galleries */
@@ -826,13 +868,14 @@ video {
   display: block;
 }
 
-.ecolog-media figcaption,
-.ecolog-two-image-row figcaption {
-  margin-top: 11px;
-  font-size: 15px;
-  color: #6a625c;
-  font-style: italic;
-  text-align: center;
+.setup-photo {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 16px;
+  display: block;
+  background: #f8f5ef;
 }
 
 .ecolog-two-image-row {
@@ -844,10 +887,30 @@ video {
 
 .ecolog-two-image-row img {
   width: 100%;
-  height: 240px;
+  height: 320px;
   object-fit: cover;
   border-radius: 16px;
   display: block;
+  background: #f8f5ef;
+}
+
+.machine-photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: right center;
+  border-radius: 16px;
+  display: block;
+  background: #f8f5ef;
+}
+
+.ecolog-media figcaption,
+.ecolog-two-image-row figcaption {
+  margin-top: 11px;
+  font-size: 15px;
+  color: #6a625c;
+  font-style: italic;
+  text-align: center;
 }
 
 /* YouTube thumbnail cards */
@@ -857,6 +920,10 @@ video {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 22px;
+}
+
+.single-video-grid {
+  grid-template-columns: minmax(0, 520px);
 }
 
 .video-thumbnail-card {
@@ -926,6 +993,200 @@ video {
   line-height: 1.3;
 }
 
+/* Résumé page */
+
+.resume-hero {
+  margin: 42px auto 28px;
+}
+
+.resume-hero-card {
+  padding: 44px 52px;
+}
+
+.resume-hero-card h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  margin-bottom: 18px;
+}
+
+.resume-hero-card p {
+  max-width: 840px;
+  font-size: 21px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.resume-section {
+  max-width: 980px;
+  margin: 0 auto 90px;
+  padding: 0 28px;
+}
+
+.resume-viewer {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 980px;
+  border: none;
+  border-radius: 18px;
+  background: white;
+  display: block;
+}
+
+/* Fabrication landing page */
+
+.fabrication-card-grid {
+  max-width: 1180px;
+  margin: 0 auto 90px;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.fabrication-card {
+  min-height: 280px;
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 30px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  transition: 0.2s ease;
+}
+
+.fabrication-card:hover {
+  transform: translateY(-5px);
+}
+
+.fabrication-card span {
+  font-size: 13px;
+  color: var(--brown);
+  font-weight: bold;
+}
+
+.fabrication-card h2 {
+  font-size: 38px;
+  color: var(--brown);
+  margin: 18px 0 12px;
+}
+
+.fabrication-card p {
+  font-size: 18px;
+  color: #555;
+  max-width: 520px;
+}
+
+/* Fabrication project pages */
+
+.fabric-media {
+  margin: 28px 0 32px;
+}
+
+.fabric-media figure,
+.fabric-two-grid figure,
+.fabric-three-grid figure,
+.fabric-two-video-grid figure {
+  margin: 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(138, 111, 77, 0.12);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.fabric-media img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  display: block;
+}
+
+.fabric-two-grid,
+.fabric-two-video-grid {
+  margin: 28px 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.fabric-three-grid {
+  margin: 28px 0 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.fabric-two-grid img,
+.fabric-three-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  display: block;
+}
+
+.fabric-two-video-grid video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  background: #fffdf8;
+}
+
+.fabric-media figcaption,
+.fabric-two-grid figcaption,
+.fabric-three-grid figcaption,
+.fabric-two-video-grid figcaption {
+  margin-top: 11px;
+  font-size: 15px;
+  color: #6a625c;
+  font-style: italic;
+  text-align: center;
+}
+
+.code-block {
+  margin: 26px 0 34px;
+  padding: 22px;
+  background: #fffdf8;
+  border: 1px solid rgba(138, 111, 77, 0.16);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.project-list {
+  padding-left: 24px;
+  margin: 0 0 28px;
+}
+
+.project-list li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
 /* Footer */
 
 .site-footer {
@@ -953,7 +1214,16 @@ video {
 }
 
 @media (max-width: 900px) {
-  .research-card-grid {
+  .research-card-grid,
+  .fabrication-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-card-grid .centered-research-card {
+    width: 100%;
+  }
+
+  .fabric-three-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1039,17 +1309,20 @@ video {
   }
 
   .card-grid,
-  .research-card-grid {
+  .research-card-grid,
+  .fabrication-card-grid {
     grid-template-columns: 1fr;
     padding: 0 16px;
   }
 
-  .research-card {
+  .research-card,
+  .fabrication-card {
     min-height: 260px;
     padding: 28px 24px;
   }
 
-  .research-card h2 {
+  .research-card h2,
+  .fabrication-card h2 {
     font-size: 32px;
   }
 
@@ -1071,11 +1344,15 @@ video {
   }
 
   .two-image-row,
+  .two-video-row,
   .cube-gallery,
   .shape-gallery,
   .application-gallery,
   .ecolog-two-image-row,
-  .video-thumbnail-grid {
+  .video-thumbnail-grid,
+  .single-video-grid,
+  .fabric-two-grid,
+  .fabric-two-video-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1091,12 +1368,28 @@ video {
   .two-image-row img,
   .application-gallery img,
   .ecolog-media img,
-  .ecolog-two-image-row img {
+  .ecolog-two-image-row img,
+  .fabric-media img,
+  .fabric-two-grid img,
+  .fabric-three-grid img {
     height: 220px;
+  }
+
+  .setup-photo {
+    height: 420px;
+  }
+
+  .machine-photo {
+    height: 260px;
   }
 
   .concept-figure img {
     max-height: 280px;
+  }
+
+  .two-video-row video,
+  .fabric-two-video-grid video {
+    height: 220px;
   }
 
   .thumbnail-wrap {
@@ -1105,163 +1398,11 @@ video {
 
   .gallery-section,
   .concept-figure,
-  .two-image-row figure {
+  .two-image-row figure,
+  .two-video-row figure {
     padding: 16px;
   }
-}
 
-/* Specific Ecologs image positioning */
-.setup-photo {
-  object-fit: cover;
-  object-position: center top;
-}
-
-.machine-photo {
-  object-fit: cover;
-  object-position: left center;
-}
-
-.ecolog-media {
-  margin: 28px 0 32px;
-}
-
-.ecolog-media figure,
-.ecolog-two-image-row figure {
-  margin: 0;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(138, 111, 77, 0.12);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.ecolog-two-image-row {
-  margin: 28px 0 32px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.ecolog-media figcaption,
-.ecolog-two-image-row figcaption {
-  margin-top: 11px;
-  font-size: 15px;
-  color: #6a625c;
-  font-style: italic;
-  text-align: center;
-}
-
-/* Default ecolog images */
-.ecolog-two-image-row img {
-  width: 100%;
-  height: 320px;
-  border-radius: 16px;
-  display: block;
-  background: #f8f5ef;
-}
-
-/* FIRST IMAGE: show whole setup + your face + table */
-.setup-photo {
-  width: 100%;
-  height: 620px;
-  object-fit: cover;
-  object-position: center 38%;
-  border-radius: 16px;
-  display: block;
-  background: #f8f5ef;
-
-}
-
-/* SECOND IMAGE: show more of the machine on the right */
-.machine-photo {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: right center;
-  border-radius: 16px;
-  display: block;
-  background: #f8f5ef;
-}
-
-/* Center final research card when there are three cards */
-
-.centered-research-card {
-  grid-column: 1 / -1;
-  max-width: 560px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-/* Center PRAYAAS card on research page */
-
-.research-card-grid .centered-research-card {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc((100% - 24px) / 2);
-  max-width: none;
-  margin: 0;
-}
-
-@media (max-width: 900px) {
-  .research-card-grid .centered-research-card {
-    width: 100%;
-  }
-}
-
-/* Résumé page */
-
-.resume-hero {
-  margin: 42px auto 28px;
-}
-
-.resume-hero-card {
-  padding: 44px 52px;
-}
-
-.resume-hero-card h1 {
-  font-size: clamp(48px, 7vw, 88px);
-  margin-bottom: 18px;
-}
-
-.resume-hero-card p {
-  max-width: 840px;
-  font-size: 21px;
-  color: #555;
-  margin-bottom: 0;
-}
-
-.resume-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 26px;
-}
-
-.resume-section {
-  max-width: 980px;
-  margin: 0 auto 90px;
-  padding: 0 28px;
-}
-
-.resume-viewer {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(138, 111, 77, 0.12);
-  border-radius: 28px;
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-.resume-viewer iframe {
-  width: 100%;
-  height: 980px;
-  border: none;
-  border-radius: 18px;
-  background: white;
-  display: block;
-}
-
-@media (max-width: 700px) {
   .resume-hero {
     margin-top: 38px;
   }
@@ -1298,250 +1439,5 @@ video {
   .resume-viewer iframe {
     height: 720px;
     border-radius: 14px;
-  }
-}
-/* Specific Ecologs image positioning */
-
-.setup-photo {
-  width: 100%;
-  height: 620px;
-  object-fit: cover;
-  object-position: center 38%;
-  border-radius: 16px;
-  display: block;
-  background: #f8f5ef;
-}
-
-.machine-photo {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: right center;
-  border-radius: 16px;
-  display: block;
-  background: #f8f5ef;
-}
-
-/* Center PRAYAAS card on research page */
-
-.research-card-grid .centered-research-card {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc((100% - 24px) / 2);
-  max-width: none;
-  margin: 0;
-}
-
-/* Résumé page */
-
-.resume-hero {
-  margin: 42px auto 28px;
-}
-
-.resume-hero-card {
-  padding: 44px 52px;
-}
-
-.resume-hero-card h1 {
-  font-size: clamp(48px, 7vw, 88px);
-  margin-bottom: 18px;
-}
-
-.resume-hero-card p {
-  max-width: 840px;
-  font-size: 21px;
-  color: #555;
-  margin-bottom: 0;
-}
-
-.resume-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 26px;
-}
-
-.resume-section {
-  max-width: 980px;
-  margin: 0 auto 90px;
-  padding: 0 28px;
-}
-
-.resume-viewer {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(138, 111, 77, 0.12);
-  border-radius: 28px;
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-.resume-viewer iframe {
-  width: 100%;
-  height: 980px;
-  border: none;
-  border-radius: 18px;
-  background: white;
-  display: block;
-}
-
-/* Two small prototype videos */
-
-.two-video-row {
-  margin: 26px 0 34px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.two-video-row figure {
-  margin: 0;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(138, 111, 77, 0.12);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.two-video-row video {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-  background: #fffdf8;
-}
-
-.square-video {
-  object-position: 25% center;
-}
-
-.two-video-row figcaption {
-  margin-top: 10px;
-  font-size: 15px;
-  color: #6a625c;
-  font-style: italic;
-  text-align: center;
-}
-
-/* Final mobile overrides */
-
-@media (max-width: 900px) {
-  .research-card-grid .centered-research-card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 700px) {
-  .resume-hero {
-    margin-top: 38px;
-  }
-
-  .resume-hero-card {
-    padding: 34px 24px;
-  }
-
-  .resume-hero-card h1 {
-    font-size: 46px;
-  }
-
-  .resume-hero-card p {
-    font-size: 18px;
-  }
-
-  .resume-actions {
-    flex-direction: column;
-  }
-
-  .resume-actions .button {
-    text-align: center;
-  }
-
-  .resume-section {
-    padding: 0 16px;
-  }
-
-  .resume-viewer {
-    padding: 10px;
-    border-radius: 22px;
-  }
-
-  .resume-viewer iframe {
-    height: 720px;
-    border-radius: 14px;
-  }
-
-  .two-video-row {
-    grid-template-columns: 1fr;
-  }
-
-  .two-video-row video {
-    height: 220px;
-  }
-}
-
-
-/* Fabrication landing page */
-
-.fabrication-card-grid {
-  max-width: 1180px;
-  margin: 0 auto 90px;
-  padding: 0 28px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.fabrication-card {
-  min-height: 280px;
-  text-decoration: none;
-  color: var(--text);
-  border-radius: 30px;
-  padding: 34px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(138, 111, 77, 0.12);
-  transition: 0.2s ease;
-}
-
-.fabrication-card:hover {
-  transform: translateY(-5px);
-}
-
-.fabrication-card span {
-  font-size: 13px;
-  color: var(--brown);
-  font-weight: bold;
-}
-
-.fabrication-card h2 {
-  font-size: 38px;
-  color: var(--brown);
-  margin: 18px 0 12px;
-}
-
-.fabrication-card p {
-  font-size: 18px;
-  color: #555;
-  max-width: 520px;
-}
-
-@media (max-width: 900px) {
-  .fabrication-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 700px) {
-  .fabrication-card-grid {
-    padding: 0 16px;
-  }
-
-  .fabrication-card {
-    min-height: 260px;
-    padding: 28px 24px;
-  }
-
-  .fabrication-card h2 {
-    font-size: 32px;
   }
 }

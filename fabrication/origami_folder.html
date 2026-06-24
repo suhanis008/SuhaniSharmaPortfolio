@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Automated Origami Folding Machine | Suhani Sharma</title>
+
+  <link rel="stylesheet" href="css/style.css?v=21" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Suhani Sharma</a>
+
+      <ul class="nav-links">
+        <li><a href="../about/">About</a></li>
+        <li><a href="../research/">Research</a></li>
+        <li><a href="../fabrication/">Fabrication</a></li>
+        <li><a href="../art/">Art</a></li>
+        <li><a href="../music/">Music</a></li>
+        <li><a href="../sustainability/">Sustainability</a></li>
+        <li><a href="../sports/">Sports</a></li>
+        <li><a href="../writing/">Writing</a></li>
+        <li><a href="../resume/">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="project-hero">
+      <div class="project-hero-card">
+        <p class="eyebrow">fabrication / PS70 final project</p>
+
+        <h1>Automated Origami Folding Machine</h1>
+
+        <p>
+          This was my final project for my class, PS70: Introduction to Digital Fabrication.
+          I built a mechanical-electronic system that automates part of the origami
+          folding process using a redesigned hinge, two servos, a holding mechanism,
+          plywood boxes, and code.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-layout">
+
+      <article class="project-main">
+
+        <h2>Purpose of the project</h2>
+
+        <p>
+          My final project aimed to automate the process of folding origami. I started
+          with simple 2D folds because basic creases and grid folds form the foundation
+          for more complex origami structures.
+        </p>
+
+        <p>
+          The goal was to build a machine that could create one clean, consistent fold
+          automatically. It sounded simple, just one fold, but I quickly realized that
+          even this single action involves a surprising amount of mechanical and design
+          complexity.
+        </p>
+
+        <p>
+          The paper had to stay aligned, the hinge had to rotate smoothly, the servo
+          needed enough torque, and the structure had to stay stable while the fold
+          happened.
+        </p>
+
+        <h2>From MVP to final project</h2>
+
+        <p>
+          My MVP showed that a servo-driven hinge could make a basic fold, but it also
+          revealed the main issues I needed to solve. The hinge was too weak, the servo
+          did not have enough torque, the paper had to be taped down manually, and the
+          whole structure shifted while folding.
+        </p>
+
+        <p>
+          For the final version, I redesigned the hinge, used a stronger servo, added
+          a second servo to hold the paper down, and rebuilt the structure using
+          finger-joint plywood boxes instead of cardboard. The goal was to make the
+          system more stable, more repeatable, and closer to being semi-autonomous.
+        </p>
+
+        <p>
+          The earlier prototype is documented
+          <a href="https://suhanis008.github.io/PS70_2025/07_outputs/index.html" target="_blank" rel="noopener noreferrer" class="text-link">
+            here
+          </a>.
+        </p>
+
+        <h2>Better hinge design</h2>
+
+        <p>
+          I redesigned the hinge to increase wall thickness, improve tolerances, and
+          prevent cracking. The hinge had to be strong enough to handle repeated
+          folding, but still smooth enough to rotate cleanly.
+        </p>
+
+        <div class="project-video">
+          <video controls muted playsinline>
+            <source src="../assets/images/origami_folder/final_hinge.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Stronger servo and screw attachment</h2>
+
+        <p>
+          I upgraded to a stronger servo and switched to a screw-mounted arm. This
+          made the connection more secure than press-fitting or taping parts together,
+          and gave the folding mechanism more reliable motion.
+        </p>
+
+        <div class="fabric-media">
+          <figure>
+            <img src="../assets/images/origami_folder/comparison.jpeg" alt="Servo arm and screw attachment comparison">
+            <figcaption>
+              Testing a stronger servo and a more secure screw-mounted arm.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="project-video">
+          <video controls muted playsinline>
+            <source src="../assets/images/origami_folder/paper_fold_basic.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Thread linkage and holding mechanism</h2>
+
+        <p>
+          One issue with the first prototype was that I had to tape the paper onto
+          the hinge before every fold. That made the system feel much less autonomous.
+          To fix this, I designed a holding arm mechanism for a second servo and
+          shifted to a hinge with a larger gap so the mechanism could sit between
+          the hinge and the folding surface.
+        </p>
+
+        <div class="fabric-two-grid">
+          <figure>
+            <img src="../assets/images/origami_folder/holding_mechanism_screw.jpeg" alt="Holding mechanism with screw">
+            <figcaption>
+              First holding mechanism prototype.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/origami_folder/between_hinge.jpeg" alt="Holding mechanism placed between hinge">
+            <figcaption>
+              Adjusting the hinge gap so the holding mechanism could fit.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          I later upgraded to a wider holding mechanism so it could press down on
+          the paper more evenly.
+        </p>
+
+        <div class="fabric-media">
+          <figure>
+            <img src="../assets/images/origami_folder/wider_holding.jpeg" alt="Wider holding mechanism">
+            <figcaption>
+              Wider holding mechanism for more stable paper placement.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          I also attached a thread between the folding servo arm and the hinge. This
+          helped bring the hinge back down after each fold.
+        </p>
+
+        <h2>Paper choice</h2>
+
+        <p>
+          Thick paper did not fold well because the folding arm was open on one end.
+          Normal printer paper worked much better because it creased more easily and
+          needed less force.
+        </p>
+
+        <div class="fabric-two-video-grid">
+          <figure>
+            <video controls muted playsinline>
+              <source src="../assets/images/origami_folder/thick_paper_fail.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Thick paper did not fold cleanly.</figcaption>
+          </figure>
+
+          <figure>
+            <video controls muted playsinline>
+              <source src="../assets/images/origami_folder/printer_paper_pass.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Printer paper performed much better.</figcaption>
+          </figure>
+        </div>
+
+        <h2>Electronics and code</h2>
+
+        <p>
+          I switched from an ESP32 to a Xiao board after my ESP32 stopped working,
+          which also gave me more soldering practice. I controlled two servos: one
+          for holding the paper and one for folding it.
+        </p>
+
+        <pre class="code-block"><code>#include &lt;ESP32Servo.h&gt;
+
+Servo myservofold;
+Servo myservohold;
+
+int Fpos = 0;
+int Hpos = 120;
+
+int ButtonPinFold = D7;
+int ServoPinFold = D8;
+int ServoPinHold = D9;
+
+void setup() {
+  myservofold.attach(ServoPinFold);
+  myservofold.write(Fpos);
+
+  myservohold.attach(ServoPinHold);
+  myservohold.write(Hpos);
+
+  pinMode(ButtonPinFold, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int ButtonStateFold = digitalRead(ButtonPinFold);
+  Serial.println(ButtonStateFold);
+
+  if (ButtonStateFold == LOW) {
+    myservohold.write(175);
+    delay(1000);
+
+    myservofold.write(118);
+    delay(1000);
+
+    myservohold.write(175);
+    delay(1000);
+
+    myservofold.write(118);
+    delay(1000);
+
+    myservofold.write(0);
+    delay(1000);
+
+    myservohold.write(120);
+    delay(1000);
+  }
+}</code></pre>
+
+        <h2>Moving from cardboard to plywood</h2>
+
+        <p>
+          Cardboard was not strong enough, and the motors kept moving because they
+          were only secured with double-sided tape. I switched to finger-joint
+          plywood boxes for a more stable structure. I prototyped the measurements
+          in cardboard first, then laser-cut the final boxes from 6 mm plywood.
+        </p>
+
+        <p>
+          The 0.18 mm kerf made the finger joints tight enough to hammer-fit without
+          wood glue, which was very satisfying.
+        </p>
+
+        <div class="fabric-two-grid">
+          <figure>
+            <img src="../assets/images/origami_folder/cardboard_prototype.jpeg" alt="Cardboard prototype">
+            <figcaption>
+              Cardboard prototype used to test measurements.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/origami_folder/mallet_box_fit.jpeg" alt="Press-fit plywood box with mallet">
+            <figcaption>
+              Press-fit plywood box after laser cutting.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h2>Motor mounts and L-joints</h2>
+
+        <p>
+          I measured the motor dimensions and designed L-joints to hold the motors
+          down more securely. I also drilled through the plywood so screws could
+          mount the motors instead of relying on tape.
+        </p>
+
+        <div class="fabric-three-grid">
+          <figure>
+            <img src="../assets/images/origami_folder/L-joint.jpeg" alt="3D printed L-joint">
+            <figcaption>L-joint prototype.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/origami_folder/Screws.jpeg" alt="Screws through plywood box">
+            <figcaption>Screw placement inside the plywood box.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/origami_folder/mountedL-joint.jpeg" alt="Mounted L-joint on motor">
+            <figcaption>Mounted L-joint holding the motor in place.</figcaption>
+          </figure>
+        </div>
+
+        <p>
+          After sanding the plywood edges, I attached the boxes together and taped
+          the hinge onto the surface.
+        </p>
+
+        <div class="fabric-media">
+          <figure>
+            <img src="../assets/images/origami_folder/assembled_boxes.jpeg" alt="Assembled plywood boxes">
+            <figcaption>
+              Assembled plywood boxes with the folding mechanism mounted on top.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h2>Switch mount and base</h2>
+
+        <p>
+          I soldered a switch and 3D printed a small mount so it could be pressed
+          from the front. I then attached the whole mechanism onto a plywood base
+          for stability.
+        </p>
+
+        <h2>Final demo</h2>
+
+        <div class="project-video">
+          <video controls muted playsinline>
+            <source src="../assets/images/origami_folder/final_fold_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Presentation video</h2>
+
+        <p>
+          Here is my full presentation video for the final project.
+        </p>
+
+        <div class="video-thumbnail-grid single-video-grid">
+          <a href="https://youtu.be/vIY8vMq3GZU?si=BjYDIQr3U0yvIIMN" target="_blank" rel="noopener noreferrer" class="video-thumbnail-card">
+            <div class="thumbnail-wrap">
+              <img src="https://img.youtube.com/vi/vIY8vMq3GZU/hqdefault.jpg" alt="Automated origami folding machine presentation video thumbnail">
+              <span class="play-button">▶</span>
+            </div>
+
+            <div class="video-card-text">
+              <span>Final presentation</span>
+              <strong>Watch the project video</strong>
+            </div>
+          </a>
+        </div>
+
+        <h2>Further work</h2>
+
+        <ul class="project-list">
+          <li>Reduce the hinge gap for sharper folds.</li>
+          <li>Thin the holding mechanism while keeping it stable.</li>
+          <li>Add a tiny motorized roller to advance the paper.</li>
+          <li>Explore multiple sequential folds.</li>
+        </ul>
+
+        <h2>What I took from it</h2>
+
+        <p>
+          This was my first time building a complete mechanical-electronic system
+          from scratch. I learned how long even simple tasks can take, especially
+          when mechanics, electronics, code, and fabrication all have to work
+          together.
+        </p>
+
+        <p>
+          I spent a lot of time in the makerspace working on this project, and I’m
+          proud of how it turned out. It made me much more comfortable with iteration,
+          debugging, soldering, laser cutting, 3D printing, and designing around
+          real physical constraints.
+        </p>
+
+      </article>
+
+      <aside class="project-side">
+
+        <div class="side-card">
+          <h3>Project details</h3>
+
+          <ul>
+            <li><strong>Class:</strong> PS70: Introduction to Digital Fabrication</li>
+            <li><strong>Area:</strong> Digital fabrication, mechanism design, electronics</li>
+            <li><strong>Goal:</strong> Automate part of the origami folding process</li>
+            <li><strong>Tools:</strong> Laser cutting, 3D printing, soldering, coding</li>
+          </ul>
+        </div>
+
+        <div class="side-card soft">
+          <h3>Main components</h3>
+
+          <ul>
+            <li>Redesigned hinge</li>
+            <li>Folding servo</li>
+            <li>Holding servo</li>
+            <li>Thread linkage</li>
+            <li>Finger-joint plywood boxes</li>
+            <li>Xiao board and button control</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>What changed</h3>
+
+          <ul>
+            <li>Moved from cardboard to plywood</li>
+            <li>Upgraded to stronger motors</li>
+            <li>Added a paper-holding mechanism</li>
+            <li>Secured motors with screws instead of tape</li>
+            <li>Improved stability and repeatability</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Suhani Sharma.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
