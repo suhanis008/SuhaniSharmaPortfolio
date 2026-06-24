@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kinetic Sculpture | Suhani Sharma</title>
+
+  <link rel="stylesheet" href="../css/style.css?v=33" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Suhani Sharma</a>
+
+      <ul class="nav-links">
+        <li><a href="../about/">About</a></li>
+        <li><a href="../research/">Research</a></li>
+        <li><a href="../fabrication/">Fabrication</a></li>
+        <li><a href="../art/">Art</a></li>
+        <li><a href="../music/">Music</a></li>
+        <li><a href="../sustainability/">Sustainability</a></li>
+        <li><a href="../sports/">Sports</a></li>
+        <li><a href="../writing/">Writing</a></li>
+        <li><a href="../resume/">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="project-hero">
+      <div class="project-hero-card">
+        <p class="eyebrow">fabrication / motion and mechanisms</p>
+
+        <h1>Kinetic Sculpture</h1>
+
+        <p>
+          I built a small kinetic sculpture where a sign moves up and down as a
+          motor rotates. I later made a second version with a motor driver and
+          potentiometer so the speed of the motion could be controlled.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-layout">
+
+      <article class="project-main">
+
+        <h2>Project overview</h2>
+
+<p>
+  The goal was to create a simple moving sculpture using a mechanical
+  linkage. I wanted the sculpture to have a part that moved up and down
+  through the box as the motor rotated.
+</p>
+
+<p>
+  During testing, I realized that the moving piece needed to stay visible
+  and not slip too far into the box. I switched to a sign because it could
+  move up and down more reliably while still keeping the motion easy to see.
+</p>
+
+<div class="fabric-media kinetic-main-image">
+  <figure>
+    <img src="../assets/images/kinetic/Hand%20image.PNG" alt="Early hand-shaped cutout for kinetic sculpture">
+    <figcaption>
+      Early hand-shaped cutout from my first idea before switching to the sign.
+    </figcaption>
+  </figure>
+</div>
+
+<h2>Designing the movement</h2>
+
+<p>
+  I experimented with different circle radii to make the motion smoother.
+  The base also needed to be wide enough to roll off the rotating circle
+  properly. Small changes in the size and placement of the moving parts
+  made a big difference in whether the sculpture moved cleanly or jammed.
+</p>
+
+<div class="project-video kinetic-video">
+  <video controls muted playsinline>
+    <source src="../assets/images/kinetic/Kinetic%20without%20the%20motor.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<p>
+  Once the basic motion worked by hand, I built a motor mount so the motor
+  would stay in place while driving the movement.
+</p>
+
+<div class="fabric-media kinetic-main-image">
+  <figure>
+    <img src="../assets/images/kinetic/Kinetic%20Sculpture%20with%20Motor.PNG" alt="Kinetic sculpture with motor attached">
+    <figcaption>
+      Kinetic sculpture after adding the motor and mount.
+    </figcaption>
+  </figure>
+</div>
+
+<div class="project-video kinetic-video">
+  <video controls muted playsinline>
+    <source src="../assets/images/kinetic/Kinetic%20with%20motor.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+        <h2>Adding motor control</h2>
+
+        <p>
+          In the next version, I added an L298N motor driver and a potentiometer to
+          control the speed of the motor. Turning the potentiometer changed the
+          voltage input read by the microcontroller, which then adjusted the PWM
+          signal sent to the motor driver.
+        </p>
+
+        <p>
+          This made the sculpture more interactive because the motion was no longer
+          just on or off. I could tune how fast the sign moved by changing the
+          potentiometer value.
+        </p>
+
+        <div class="kinetic-two-grid">
+          <figure>
+            <img src="../assets/images/kinetic/Motor%20and%20Potentiometer%20Set%20up.png" alt="Motor and potentiometer setup">
+            <figcaption>
+              Motor driver and potentiometer setup.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="../assets/images/kinetic/Circuit%20Diagram.jpg" alt="Circuit diagram for motor and potentiometer setup">
+            <figcaption>
+              Circuit diagram for the motor, potentiometer, and microcontroller.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h2>Code</h2>
+
+        <p>
+          The code reads the potentiometer value, maps it to a motor speed, and
+          writes that speed using PWM.
+        </p>
+
+        <pre class="code-block"><code>const int A1A = 12;
+const int A2A = 14;
+const int potPin = 32;
+
+void setup() {
+  pinMode(A1A, OUTPUT);
+  pinMode(A2A, OUTPUT);
+  pinMode(potPin, INPUT);
+
+  ledcAttach(A1A, 5000, 8);
+  Serial.begin(115200);
+}
+
+void loop() {
+  int pot_value = analogRead(potPin);
+  int motor_speed = map(pot_value, 0, 4095, 255, 0);
+
+  Serial.println(motor_speed);
+
+  ledcWrite(A1A, motor_speed);
+  digitalWrite(A2A, LOW);
+
+  delay(1);
+}</code></pre>
+
+        <h2>Final demo</h2>
+
+        <p>
+          The final version combined the physical moving sign with motor-speed
+          control. It was a useful way to understand how mechanical motion,
+          electronics, and code all affect each other.
+        </p>
+
+        <div class="project-video kinetic-video">
+          <video controls muted playsinline>
+            <source src="../assets/images/kinetic/Final%20Kinetic%20Sculpture.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Reflection</h2>
+
+        <p>
+          This project taught me that even simple motion can require a lot of
+          iteration. The sculpture only worked once the mechanical parts, the
+          motor placement, the circuit, and the code were all aligned with each
+          other.
+        </p>
+
+      </article>
+
+      <aside class="project-side">
+
+        <div class="side-card">
+          <h3>Project details</h3>
+
+          <ul>
+            <li><strong>Area:</strong> Motion and mechanisms</li>
+            <li><strong>Project:</strong> Motorized kinetic sculpture</li>
+            <li><strong>Focus:</strong> Linkages, motor control, and iteration</li>
+            <li><strong>Output:</strong> Moving sign mechanism</li>
+          </ul>
+        </div>
+
+        <div class="side-card soft">
+          <h3>Technical pieces</h3>
+
+          <ul>
+            <li>DC motor</li>
+            <li>L298N motor driver</li>
+            <li>Potentiometer</li>
+            <li>PWM speed control</li>
+            <li>Microcontroller programming</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>What changed</h3>
+
+          <ul>
+            <li>Started with a simple up-and-down mechanism</li>
+            <li>Switched to a sign for more reliable motion</li>
+            <li>Added a motor mount</li>
+            <li>Added potentiometer speed control</li>
+            <li>Improved the circuit and code</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Suhani Sharma.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
