@@ -6,7 +6,7 @@
 
   <title>Fabrication | Suhani Sharma</title>
 
-  <link rel="stylesheet" href="../css/style.css?v=37" />
+  <link rel="stylesheet" href="../css/style.css?v=55" />
 </head>
 
 <body>
@@ -44,13 +44,25 @@
       </div>
     </section>
 
-    <section class="fabrication-card-grid fabrication-image-card-grid">
+    <section class="fabrication-toolbar">
+      <label for="fabrication-sort">Sort by</label>
 
-      <a href="origami_folder.html" class="fabrication-card lavender image-card">
+     <select id="fabrication-sort">
+  <option value="newest" selected>Newest first</option>
+  <option value="oldest">Oldest first</option>
+</select>
+    </section>
+
+    <section class="fabrication-card-grid fabrication-image-card-grid" id="fabrication-grid">
+
+      <a href="origami_folder.html" class="fabrication-card lavender image-card" data-year="2025" data-order="1">
         <img src="../assets/images/origami_folder/assembled_boxes.jpeg" alt="Automated origami folding machine" class="fabrication-card-image">
 
         <div class="fabrication-card-content">
-          <span>01 / mechanisms</span>
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">01</span> / mechanisms</span>
+            <span class="fabrication-year">2025</span>
+          </div>
 
           <h2>Automated Origami Folding Machine</h2>
 
@@ -58,60 +70,99 @@
             A mechanical-electronic system that automates part of the origami
             folding process using servos, hinges, and custom-built structures.
           </p>
+
+          <div class="fabrication-tags">
+            <span>servos</span>
+            <span>hinges</span>
+            <span>mechanisms</span>
+            <span>prototyping</span>
+          </div>
         </div>
       </a>
 
-      <a href="ES51.html" class="fabrication-card cream image-card">
-        <img src="../assets/images/ES51_robot.png" alt="ES 51 competition robot" class="fabrication-card-image">
+      <a href="ES51.html" class="fabrication-card cream image-card" data-year="2026" data-order="2">
+        <img src="../assets/images/ES51_robot.png" alt="Competition robot" class="fabrication-card-image">
 
         <div class="fabrication-card-content">
-          <span>02 / engineering design</span>
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">02</span> / engineering design</span>
+            <span class="fabrication-year">2026</span>
+          </div>
 
           <h2>Competition Robot Design</h2>
 
           <p>
-            <p>
-  My ES 51 (Engineering Design Class) final project: a competition robot built through mechanical design,
-  fabrication, testing, iteration, and team-based engineering.
-</p>
+            My ES 51 final project: a competition robot built through mechanical
+            design, fabrication, testing, iteration, and team-based engineering.
           </p>
+
+          <div class="fabrication-tags">
+            <span>robotics</span>
+            <span>testing</span>
+            <span>design</span>
+            <span>teamwork</span>
+          </div>
         </div>
       </a>
 
-      <a href="drawing_machine.html" class="fabrication-card blue image-card">
+      <a href="drawing_machine.html" class="fabrication-card blue image-card" data-year="2025" data-order="3">
         <img src="../assets/images/drawing_machine.png" alt="Drawing machine" class="fabrication-card-image">
 
         <div class="fabrication-card-content">
-          <span>03 / machine building</span>
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">03</span> / machine building</span>
+            <span class="fabrication-year">2025</span>
+          </div>
 
           <h2>Drawing Machine</h2>
 
           <p>
-            A collaborative drawing machine that dispenses ink onto water to
-            create temporary shapes and marbled patterns.
+            A collaborative drawing machine that dispenses ink onto water to create
+            temporary shapes and marbled patterns.
           </p>
+
+          <div class="fabrication-tags">
+            <span>machine design</span>
+            <span>ink</span>
+            <span>water</span>
+            <span>collaboration</span>
+          </div>
         </div>
       </a>
 
-<a href="cnc.html" class="fabrication-card green image-card">
-  <img src="../assets/images/CNC/H_final1.jpg" alt="Marbled Harvard H tray" class="fabrication-card-image">
+      <a href="cnc.html" class="fabrication-card green image-card" data-year="2025" data-order="4">
+        <img src="../assets/images/CNC/H_final1.jpg" alt="Marbled Harvard H tray" class="fabrication-card-image">
 
-  <div class="fabrication-card-content">
-    <span>04 / CNC milling</span>
+        <div class="fabrication-card-content">
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">04</span> / CNC milling</span>
+            <span class="fabrication-year">2025</span>
+          </div>
 
-    <h2>CNC Milling</h2>
+          <h2>CNC Milling</h2>
 
-    <p>
-      Wooden trays made through Fusion 360 design, ShopBot milling,
-      sanding, shellac finishing, vacuum forming, and casting.
-    </p>
-  </div>
-</a>
-      <a href="networking.html" class="fabrication-card pink image-card">
+          <p>
+            Wooden trays made through Fusion 360 design, ShopBot milling, sanding,
+            shellac finishing, vacuum forming, and casting.
+          </p>
+
+          <div class="fabrication-tags">
+            <span>ShopBot</span>
+            <span>Fusion 360</span>
+            <span>casting</span>
+            <span>finishing</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="networking.html" class="fabrication-card pink image-card" data-year="2025" data-order="5">
         <img src="../assets/images/circuit.png" alt="Sound-responsive circuit" class="fabrication-card-image">
 
         <div class="fabrication-card-content">
-          <span>05 / connected circuits</span>
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">05</span> / connected circuits</span>
+            <span class="fabrication-year">2025</span>
+          </div>
 
           <h2>Sound-Responsive Circuit</h2>
 
@@ -119,14 +170,24 @@
             A microphone, buzzer, microcontroller, and LAN web server used to
             respond to room noise with different notes and songs.
           </p>
+
+          <div class="fabrication-tags">
+            <span>LAN</span>
+            <span>sensor</span>
+            <span>buzzer</span>
+            <span>thresholds</span>
+          </div>
         </div>
       </a>
 
-      <a href="kinetic_sculpture.html" class="fabrication-card yellow image-card">
+      <a href="kinetic_sculpture.html" class="fabrication-card yellow image-card" data-year="2025" data-order="6">
         <img src="../assets/images/Kinetic/Kinetic%20Sculpture%20with%20Motor.PNG" alt="Kinetic sculpture with motor" class="fabrication-card-image">
 
         <div class="fabrication-card-content">
-          <span>06 / motion and mechanisms</span>
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">06</span> / motion and mechanisms</span>
+            <span class="fabrication-year">2025</span>
+          </div>
 
           <h2>Kinetic Sculpture</h2>
 
@@ -134,14 +195,24 @@
             A motorized moving sign mechanism later upgraded with an L298N motor
             driver, potentiometer, and PWM speed control.
           </p>
+
+          <div class="fabrication-tags">
+            <span>motor</span>
+            <span>PWM</span>
+            <span>linkage</span>
+            <span>potentiometer</span>
+          </div>
         </div>
       </a>
 
-      <a href="wooden_box.html" class="fabrication-card peach image-card">
+      <a href="wooden_box.html" class="fabrication-card peach image-card" data-year="2017" data-order="7">
         <img src="../assets/images/box1.jpeg" alt="Wooden mystery box" class="fabrication-card-image">
 
         <div class="fabrication-card-content">
-          <span>07 / early build</span>
+          <div class="fabrication-card-topline">
+            <span><span class="fabrication-number">07</span> / early build</span>
+            <span class="fabrication-year">2017</span>
+          </div>
 
           <h2>Wooden Mystery Box</h2>
 
@@ -149,6 +220,13 @@
             A wooden puzzle box I made around age ten using a saw, wood glue,
             trial and error, and a tutorial from The King of Random YouTube channel.
           </p>
+
+          <div class="fabrication-tags">
+            <span>woodworking</span>
+            <span>puzzle</span>
+            <span>saw</span>
+            <span>wood glue</span>
+          </div>
         </div>
       </a>
 
@@ -159,6 +237,50 @@
   <footer class="site-footer">
     <p>© 2026 Suhani Sharma.</p>
   </footer>
+
+ <script>
+  const fabricationSort = document.getElementById("fabrication-sort");
+  const fabricationGrid = document.getElementById("fabrication-grid");
+
+  function updateFabricationNumbers() {
+    const cards = Array.from(fabricationGrid.querySelectorAll(".fabrication-card"));
+
+    cards.forEach(function (card, index) {
+      const number = card.querySelector(".fabrication-number");
+
+      if (number) {
+        number.textContent = String(index + 1).padStart(2, "0");
+      }
+    });
+  }
+
+  function sortFabricationCards() {
+    const cards = Array.from(fabricationGrid.querySelectorAll(".fabrication-card"));
+
+    cards.sort(function (a, b) {
+      const aYear = Number(a.dataset.year);
+      const bYear = Number(b.dataset.year);
+      const aOrder = Number(a.dataset.order);
+      const bOrder = Number(b.dataset.order);
+
+      if (fabricationSort.value === "newest") {
+        return bYear - aYear || aOrder - bOrder;
+      }
+
+      return aYear - bYear || aOrder - bOrder;
+    });
+
+    cards.forEach(function (card) {
+      fabricationGrid.appendChild(card);
+    });
+
+    updateFabricationNumbers();
+  }
+
+  fabricationSort.addEventListener("change", sortFabricationCards);
+
+  sortFabricationCards();
+</script>
 
   <script src="../js/script.js"></script>
 </body>

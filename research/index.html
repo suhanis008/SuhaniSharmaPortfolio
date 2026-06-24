@@ -6,7 +6,7 @@
 
   <title>Research | Suhani Sharma</title>
 
-  <link rel="stylesheet" href="../css/style.css?v=52" />
+  <link rel="stylesheet" href="../css/style.css?v=54" />
 </head>
 
 <body>
@@ -44,13 +44,25 @@
       </div>
     </section>
 
-    <section class="research-card-grid research-image-card-grid">
+    <section class="research-toolbar">
+      <label for="research-sort">Sort by</label>
 
-     <a href="./Deployable_structures.html" class="research-card image-card">
+     <select id="research-sort">
+  <option value="newest" selected>Newest first</option>
+  <option value="oldest">Oldest first</option>
+</select>
+    </section>
+
+    <section class="research-card-grid research-image-card-grid" id="research-grid">
+
+      <a href="./Deployable_structures.html" class="research-card image-card" data-start="2024" data-end="2025">
         <img src="../assets/images/dodecahedron.png" alt="Dodecahedron deployable structure prototype" class="research-card-image">
 
         <div class="research-card-content">
-          <span>01 / computational geometry / fabrication</span>
+          <div class="research-card-topline">
+            <span>01 / computational geometry / fabrication</span>
+            <span class="research-year">2024–2025</span>
+          </div>
 
           <h2>Deployable Structures</h2>
 
@@ -58,14 +70,24 @@
             A research project on turning flat polyhedral nets into 3D structures
             using hinges, threads, graph threading, and physical fabrication.
           </p>
+
+          <div class="research-tags">
+            <span>geometry</span>
+            <span>fabrication</span>
+            <span>hinges</span>
+            <span>nets</span>
+          </div>
         </div>
       </a>
 
-      <a href="./Ecologs.html" class="research-card image-card">
+      <a href="./Ecologs.html" class="research-card image-card" data-start="2024" data-end="2025">
         <img src="../assets/images/machine.png" alt="Ecologs sustainability project" class="research-card-image">
 
         <div class="research-card-content">
-          <span>02 / sustainability / product innovation</span>
+          <div class="research-card-topline">
+            <span>02 / sustainability / product innovation</span>
+            <span class="research-year">2024–2025</span>
+          </div>
 
           <h2>Ecologs</h2>
 
@@ -73,14 +95,24 @@
             A sustainability innovation project developing an alternative cremation
             fuel using cow dung and coconut shells to reduce firewood use.
           </p>
+
+          <div class="research-tags">
+            <span>sustainability</span>
+            <span>biomass</span>
+            <span>product design</span>
+            <span>climate</span>
+          </div>
         </div>
       </a>
 
-      <a href="./Prayaas.html" class="research-card image-card prayaas-center-card">
+      <a href="./Prayaas.html" class="research-card image-card" data-start="2024" data-end="2024">
         <img src="../assets/images/prayaas.jpeg" alt="PRAYAAS fieldwork with students" class="research-card-image">
 
         <div class="research-card-content">
-          <span>03 / education equity / policy research</span>
+          <div class="research-card-topline">
+            <span>03 / education equity / policy research</span>
+            <span class="research-year">2024</span>
+          </div>
 
           <h2>NCERT PRAYAAS</h2>
 
@@ -89,6 +121,13 @@
             among senior secondary students in Punjab, and what schools and
             policymakers can do to improve access and confidence.
           </p>
+
+          <div class="research-tags">
+            <span>education</span>
+            <span>policy</span>
+            <span>Punjab</span>
+            <span>equity</span>
+          </div>
         </div>
       </a>
 
@@ -99,6 +138,44 @@
   <footer class="site-footer">
     <p>© 2026 Suhani Sharma.</p>
   </footer>
+
+  <script>
+  const researchSort = document.getElementById("research-sort");
+  const researchGrid = document.getElementById("research-grid");
+
+  function sortResearchCards() {
+    const cards = Array.from(researchGrid.querySelectorAll(".research-card"));
+
+    cards.forEach(function (card, index) {
+      if (!card.dataset.originalOrder) {
+        card.dataset.originalOrder = index;
+      }
+    });
+
+    cards.sort(function (a, b) {
+      const aEnd = Number(a.dataset.end);
+      const bEnd = Number(b.dataset.end);
+      const aStart = Number(a.dataset.start);
+      const bStart = Number(b.dataset.start);
+      const aOrder = Number(a.dataset.originalOrder);
+      const bOrder = Number(b.dataset.originalOrder);
+
+      if (researchSort.value === "newest") {
+        return bEnd - aEnd || bStart - aStart || aOrder - bOrder;
+      }
+
+      return aStart - bStart || aEnd - bEnd || aOrder - bOrder;
+    });
+
+    cards.forEach(function (card) {
+      researchGrid.appendChild(card);
+    });
+  }
+
+  researchSort.addEventListener("change", sortResearchCards);
+
+  sortResearchCards();
+</script>
 
   <script src="../js/script.js"></script>
 </body>
