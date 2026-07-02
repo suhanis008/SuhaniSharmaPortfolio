@@ -62,8 +62,8 @@
 
         <p>
           The question I worked on was: if a polyhedron is cut open into a flat net,
-          can a thread be routed through that net so that pulling the thread
-          <em>efficiently</em> brings it back into its 3D shape?
+          what are the points through which thread should be passed so that pulling the thread
+          brings it back into its 3D shape while reducing the number of thread turns and length?
         </p>
 
         <h2>Early inspiration</h2>
@@ -85,9 +85,7 @@
 
         <p>
           A deployable structure is something that can move between different shapes or
-          configurations. The version I worked on uses a flat net of a polyhedron. The
-          goal is to thread the net in a way that lets it pull up into the intended 3D
-          structure.
+          configurations. The version I worked on uses a flat net of a polyhedron. 
         </p>
 
 
@@ -155,9 +153,8 @@
         </div>
 
         <p>
-          I defined the corners, holes, and hinged connections of a net, then used that
-          structure to decide where threading was actually needed. Corners with fewer
-          hinged connections needed more help from the thread. Corners with more hinged
+          Corners with fewer
+          hinged connections (the number of hinges at a corner) needed more help from the thread. Corners with more hinged
           connections were already partly guided by the hinges.
         </p>
 
@@ -170,9 +167,9 @@
         <h2>Building and testing</h2>
 
         <p>
-          To test the idea, I designed and laser-cut nets, added hinges, threaded them,
+          To test the idea, I designed and laser-cut nets, added hinges, threaded them according to my algorithm,
           and checked whether they could pull up into the intended shape. I tested cube
-          nets, a pentagonal prism, a dodecahedron, and an icosahedron.
+          nets, a pentagonal prism, a dodecahedron, and an icosahedron. The prototypes helped validate my algorithm.
         </p>
 
         <section class="gallery-section">
@@ -324,17 +321,10 @@
         <h2>What I took from it</h2>
 
         <p>
-          This project made research feel very real to me. It was not just reading papers
-          or writing equations. It was also cutting plywood, threading tiny holes, fixing
-          broken hinges, and trying to understand why one model worked better than another.
+          This project made me realize how cool research is! I loved how the things I was looking at in lab and the algorithms I was trying to make had such real applications. Working on deployable structures has made me want to pursue more hands-on resreach in college.
         </p>
 
-        <p>
-          It also showed me that I like work that sits between theory and physical design.
-          The math mattered, but so did the material, the hinge, the thread, and the fact
-          that a model either folded or did not.
-        </p>
-
+    
       </article>
 
       <aside class="project-side">
