@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sound-Responsive Circuit | Suhani Sharma</title>
+
+  <link rel="stylesheet" href="../css/style.css?v=30" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Suhani Sharma</a>
+
+      <ul class="nav-links">
+        <li><a href="../about/">About</a></li>
+        <li><a href="../research/">Research</a></li>
+        <li><a href="../fabrication/">Fabrication</a></li>
+        <li><a href="../art/">Art</a></li>
+        <li><a href="../music/">Music</a></li>
+        <li><a href="../sustainability/">Sustainability</a></li>
+        <li><a href="../sports/">Sports</a></li>
+        <li><a href="../writing/">Writing</a></li>
+        <li><a href="../resume/">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="project-hero">
+      <div class="project-hero-card">
+        <p class="eyebrow">fabrication / connected circuits</p>
+
+        <h1>Sound-Responsive Circuit</h1>
+
+        <p>
+          <a href="https://www.linkedin.com/in/faithatieno2" target="_blank" rel="noopener noreferrer" class="text-link">
+            Faith
+          </a>
+          and I built a sound-responsive circuit using a microphone sensor, buzzer,
+          microcontroller, and LAN web server. The system read room sound levels and
+          responded by playing different notes or songs.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-layout">
+
+      <article class="project-main">
+
+        <h2>Project overview</h2>
+
+        <p>
+          For this project, we wanted to build something that responded to the noise
+          level in a room. The idea came from how easy it can be to lose focus when
+          there is too much background sound. Instead of only measuring noise, we
+          wanted the circuit to respond by playing different sounds.
+        </p>
+
+        <p>
+          We connected a microphone sensor, buzzer, and microcontroller on a
+          breadboard. We also set up a LAN web server so the circuit could be
+          controlled from a local webpage. This meant the system could respond either
+          to live microphone readings or to user input from the web interface.
+        </p>
+
+        <div class="fabric-media networking-circuit-image">
+          <figure>
+            <img src="../assets/images/circuit.png" alt="Sound-responsive circuit with microphone and buzzer">
+            <figcaption>
+              Breadboard circuit with the microcontroller, microphone sensor, and buzzer.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h2>How it worked</h2>
+
+        <p>
+          We set sound thresholds for different room conditions. A quiet room could
+          trigger a lower beat, normal chatter could trigger a calmer song, and louder
+          background noise could trigger a more upbeat sound.
+        </p>
+
+        <p>
+          The local webpage gave us a manual control layer, while the microphone
+          gave the circuit an automatic sensing layer. The microcontroller handled
+          the logic between the web request, the microphone reading, and the buzzer
+          output.
+        </p>
+
+        <h2>Challenges</h2>
+
+        <p>
+          A lot of the project was debugging how the LAN interface, sensor input,
+          and buzzer output interacted. At first, it seemed like once we could
+          trigger a song from the webpage, adding microphone control would be
+          straightforward. It turned out to be more complicated because the sensor
+          and web controls had to work together without overriding each other.
+        </p>
+
+        <p>
+          We also ran into an interesting feedback problem: the microphone sometimes
+          picked up the sound from the buzzer itself. That changed the sound-level
+          reading and could make the circuit switch between different responses.
+          It was a good lesson in how software logic, hardware wiring, and physical
+          feedback can affect each other in unexpected ways.
+        </p>
+
+        <h2>Collective documentation</h2>
+
+        <p>
+          The full group documentation includes the circuit design, code, videos,
+          debugging notes, and a more detailed explanation of how the LAN web server
+          and circuit worked together.
+        </p>
+
+        <div class="resume-actions">
+          <a href="https://faithaa.github.io/PS70/09_networking/index.html" target="_blank" rel="noopener noreferrer" class="button primary">
+            Open Group Documentation
+          </a>
+        </div>
+
+      </article>
+
+      <aside class="project-side">
+
+        <div class="side-card">
+          <h3>Project details</h3>
+
+          <ul>
+            <li><strong>Area:</strong> Connected circuits</li>
+            <li><strong>Project:</strong> Sound-responsive circuit</li>
+            <li><strong>Team:</strong> Faith and Suhani</li>
+            <li><strong>Output:</strong> Notes and songs based on room sound</li>
+          </ul>
+        </div>
+
+        <div class="side-card soft">
+          <h3>Technical pieces</h3>
+
+          <ul>
+            <li>LAN web server</li>
+            <li>Microcontroller logic</li>
+            <li>Microphone sound readings</li>
+            <li>Threshold-based responses</li>
+            <li>Buzzer output</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>What I learned</h3>
+
+          <ul>
+            <li>Sensor readings can be noisy</li>
+            <li>Outputs can affect inputs</li>
+            <li>Web controls and circuit logic need careful coordination</li>
+            <li>Wiring issues can take a long time to debug</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Suhani Sharma.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
