@@ -3206,3 +3206,262 @@ video {
     grid-template-columns: 1fr;
   }
 }
+
+/* =====================================================
+   WORKING CUBES SMALLER IMAGES
+   File: art/crafts/cube.html
+   ===================================================== */
+
+.cube-2x2-small {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 24px;
+}
+
+.cube-2x2-small .craft-media-card {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.cube-2x2-small .craft-media-card img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+}
+
+.cube-3x3-small {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.cube-3x3-small .craft-media-card img {
+  width: 100%;
+  height: 230px;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+}
+
+.cube-3x3-small .craft-media-card figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+@media screen and (max-width: 900px) {
+  .cube-3x3-small {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cube-3x3-small .craft-media-card img {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cube-2x2-small .craft-media-card {
+    max-width: 340px;
+  }
+
+  .cube-2x2-small .craft-media-card img {
+    height: 240px;
+  }
+
+  .cube-3x3-small {
+    grid-template-columns: 1fr;
+  }
+
+  .cube-3x3-small .craft-media-card {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .cube-3x3-small .craft-media-card img {
+    height: 240px;
+  }
+}
+
+/* =========================
+   CLAY + QUILLING PAGE
+   ========================= */
+
+.page-shell {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto 80px;
+}
+
+.section-intro {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  color: #9a7b54;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.project-hero-card,
+.project-section-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1.5px solid #e3d2c2;
+  border-radius: 34px;
+  padding: 38px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(140, 115, 90, 0.08);
+}
+
+.project-hero-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #9a7b54;
+}
+
+.project-hero-text h1,
+.project-section-card h2 {
+  margin: 0 0 14px;
+  color: #9a7b54;
+  line-height: 1.05;
+}
+
+.project-hero-text h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+}
+
+.project-section-card h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.project-hero-text p,
+.project-section-card p {
+  color: #5f5a57;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.project-hero-image {
+  background: #f7eee8;
+  border-radius: 30px;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-hero-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 22px;
+  display: block;
+}
+
+.two-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.single-image-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.media-card {
+  background: #f7eee8;
+  border: 1.5px solid #e3d2c2;
+  border-radius: 26px;
+  padding: 16px;
+}
+
+.media-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 18px;
+  display: block;
+  background: #f7eee8;
+}
+
+.medium-card {
+  width: min(420px, 100%);
+}
+
+.medium-card img {
+  height: 260px;
+}
+
+.media-card figcaption {
+  margin-top: 14px;
+  text-align: center;
+  color: #6b645f;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .project-hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .two-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 24px, 1200px);
+  }
+
+  .project-hero-card,
+  .project-section-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .media-card img {
+    height: 240px;
+  }
+
+  .medium-card img {
+    height: 220px;
+  }
+}
+
+/* Make clay/quilling character images bigger */
+
+.clay-craft-gallery .craft-media-card img[src*="polymer.jpeg"],
+.clay-craft-gallery .craft-media-card img[src*="quilling.jpeg"] {
+  height: 320px !important;
+}
+
+.clay-craft-gallery .craft-media-card:has(img[src*="polymer.jpeg"]),
+.clay-craft-gallery .craft-media-card:has(img[src*="quilling.jpeg"]) {
+  max-width: 520px !important;
+}
