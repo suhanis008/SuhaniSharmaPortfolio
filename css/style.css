@@ -3755,3 +3755,86 @@ grid-template-columns:1fr;
 }
 
 }
+
+
+/* Lighting / Art Project Pages */
+
+
+.project-page {
+
+max-width:1200px;
+
+margin:auto;
+
+padding:60px 40px;
+
+}
+
+
+.project-header {
+
+margin-bottom:50px;
+
+}
+
+
+.project-header h1 {
+
+font-size:56px;
+
+color:#333;
+
+margin-bottom:25px;
+
+}
+
+
+.project-header p {
+
+font-size:20px;
+
+line-height:1.7;
+
+max-width:1000px;
+
+}
+
+
+
+.project-gallery {
+
+display:flex;
+
+justify-content:center;
+
+}
+
+
+
+.gallery-card {
+
+background:#fffaf5;
+
+border:1px solid #ead8ca;
+
+border-radius:35px;
+
+padding:25px;
+
+max-width:900px;
+
+}
+
+
+
+.gallery-card img {
+
+width:100%;
+
+height:auto;
+
+border-radius:25px;
+
+display:block;
+
+}
