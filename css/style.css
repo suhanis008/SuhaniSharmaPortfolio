@@ -3003,3 +3003,206 @@ video {
     font-size: 1.7rem;
   }
 }
+
+
+/* =====================================================
+   CRAFT DETAIL PAGE
+   File example: art/crafts/med_flail.html
+   ===================================================== */
+
+.craft-detail-page {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
+  padding: 18px 0 90px;
+}
+
+.craft-top-link {
+  margin-bottom: 18px;
+}
+
+.craft-top-link a {
+  color: var(--brown);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.craft-top-link a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.craft-hero {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 34px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(226, 213, 201, 0.85);
+  border-radius: 28px;
+  box-shadow: 0 20px 46px rgba(120, 90, 70, 0.10);
+  padding: 34px;
+  margin-bottom: 28px;
+}
+
+.craft-kicker {
+  margin-bottom: 12px;
+  color: #a78968;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.craft-hero h1 {
+  margin: 0;
+  color: var(--brown);
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  line-height: 1;
+}
+
+.craft-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.craft-hero-image img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 22px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  box-shadow: 0 12px 26px rgba(80, 60, 40, 0.14);
+}
+
+.craft-section {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(226, 213, 201, 0.85);
+  border-radius: 26px;
+  box-shadow: 0 16px 38px rgba(120, 90, 70, 0.08);
+  padding: 32px;
+  margin-bottom: 26px;
+}
+
+.craft-section h2 {
+  margin: 0 0 16px;
+  color: var(--brown);
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.craft-section p {
+  margin: 0 0 18px;
+  color: #5f5a57;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.craft-inline-link {
+  color: var(--brown);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.craft-inline-link:hover {
+  color: #6f5638;
+}
+
+.craft-feature-video {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.craft-feature-video .craft-media-card {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.craft-gallery {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.craft-gallery.one-column {
+  grid-template-columns: 1fr;
+}
+
+.craft-media-card {
+  margin: 0;
+  padding: 12px;
+  background: rgba(255, 248, 244, 0.86);
+  border: 1px solid rgba(222, 207, 194, 0.75);
+  border-radius: 22px;
+  box-shadow: 0 10px 22px rgba(120, 90, 70, 0.07);
+}
+
+.craft-media-card img,
+.craft-media-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  margin: 0 auto;
+}
+
+.craft-media-card figcaption {
+  margin-top: 10px;
+  color: #6a6461;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: center;
+  font-style: normal;
+}
+
+@media screen and (max-width: 900px) {
+  .craft-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .craft-detail-page {
+    width: min(100% - 24px, 980px);
+    padding: 18px 0 70px;
+  }
+
+  .craft-hero,
+  .craft-section {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .craft-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .craft-section h2 {
+    font-size: 1.55rem;
+  }
+}
+
+
+.craft-gallery.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 900px) {
+  .craft-gallery.three-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .craft-gallery.three-columns {
+    grid-template-columns: 1fr;
+  }
+}
