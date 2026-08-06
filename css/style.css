@@ -2814,3 +2814,55 @@ video {
     font-size: 1.7rem;
   }
 }
+
+/* =====================================================
+   OPTICAL ILLUSION CUBE PAGE
+   File: art/origami/original/cube.html
+   ===================================================== */
+
+.cube-hero-image img {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 22px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  box-shadow: 0 12px 26px rgba(80, 60, 40, 0.14);
+  margin: 0 auto;
+}
+
+.cube-gallery .origami-media-card img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  margin: 0 auto;
+}
+
+.cube-gallery .origami-media-card figcaption {
+  text-align: center;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .cube-gallery .origami-media-card img {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cube-hero-image img {
+    max-width: 100%;
+  }
+
+  .cube-gallery .origami-media-card img {
+    height: auto;
+    max-height: 420px;
+  }
+}
