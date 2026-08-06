@@ -2354,3 +2354,90 @@ video {
   background: #f7eee8;
   margin: 0 auto;
 }
+
+.filled-image-gallery .origami-media-card img,
+.filled-image-gallery .origami-media-card video {
+  width: 100%;
+  height: 260px;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  background: #f7eee8;
+  margin: 0 auto;
+}
+
+.filled-image-gallery .origami-media-card figcaption {
+  text-align: center;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .filled-image-gallery .origami-media-card img,
+  .filled-image-gallery .origami-media-card video {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .filled-image-gallery .origami-media-card img,
+  .filled-image-gallery .origami-media-card video {
+    height: 260px;
+  }
+}
+
+/* Dragon page: show full model without cutting important parts */
+
+.full-dragon-gallery .origami-media-card img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  margin: 0 auto;
+}
+
+.full-dragon-gallery .origami-media-card figcaption {
+  text-align: center;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .full-dragon-gallery .origami-media-card img {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .full-dragon-gallery .origami-media-card img {
+    height: auto;
+    max-height: 420px;
+  }
+}
+
+
+.origami-feature-video {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.origami-feature-video .origami-media-card {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.origami-feature-video video,
+.origami-media-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  margin: 0 auto;
+}
