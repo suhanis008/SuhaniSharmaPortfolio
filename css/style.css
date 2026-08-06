@@ -3943,3 +3943,157 @@ width:100%;
 border-radius:25px;
 
 }
+
+/* ===================================
+   LIGHTING DESIGN INDEX
+=================================== */
+
+
+.lighting-header {
+
+max-width:1200px;
+
+margin:70px auto 40px;
+
+padding:0 40px;
+
+}
+
+
+
+.lighting-header h1 {
+
+font-size:56px;
+
+margin-bottom:25px;
+
+color:#333;
+
+}
+
+
+
+.lighting-header p {
+
+max-width:1000px;
+
+font-size:21px;
+
+line-height:1.7;
+
+color:#555;
+
+}
+
+
+
+
+.lighting-grid {
+
+max-width:1200px;
+
+margin:40px auto 100px;
+
+padding:0 40px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:45px;
+
+}
+
+
+
+
+.lighting-card {
+
+background:#fffaf5;
+
+border:1px solid #ead8ca;
+
+border-radius:35px;
+
+overflow:hidden;
+
+text-decoration:none;
+
+color:inherit;
+
+transition:0.3s;
+
+}
+
+
+
+.lighting-card:hover {
+
+transform:translateY(-8px);
+
+}
+
+
+
+
+.lighting-card img {
+
+width:100%;
+
+height:360px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+
+
+
+
+.lighting-card-content {
+
+padding:30px;
+
+}
+
+
+
+
+.lighting-card-content h2 {
+
+font-size:34px;
+
+color:#806040;
+
+margin-bottom:15px;
+
+}
+
+
+
+
+.lighting-card-content p {
+
+font-size:18px;
+
+line-height:1.6;
+
+color:#444;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+.lighting-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
