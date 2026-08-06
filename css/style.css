@@ -3465,3 +3465,29 @@ video {
 .clay-craft-gallery .craft-media-card:has(img[src*="quilling.jpeg"]) {
   max-width: 520px !important;
 }
+
+
+/* =====================================
+   DEATHLY HALLOWS IMAGE SIZE FIX
+   ===================================== */
+
+main.craft-detail-page .craft-gallery.two-columns {
+    display: grid !important;
+    grid-template-columns: 280px 280px !important;
+    justify-content: center !important;
+    gap: 25px !important;
+}
+
+
+main.craft-detail-page .craft-gallery.two-columns .craft-media-card {
+    width: 280px !important;
+    max-width: 280px !important;
+}
+
+
+main.craft-detail-page .craft-gallery.two-columns .craft-media-card img {
+    width: 256px !important;
+    height: 200px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
