@@ -3838,3 +3838,108 @@ border-radius:25px;
 display:block;
 
 }
+
+
+.video-card {
+
+max-width:900px;
+
+margin:50px auto;
+
+background:#fffaf5;
+
+border:1px solid #ead8ca;
+
+border-radius:35px;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+
+.video-card img {
+
+width:100%;
+
+max-height:500px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+}
+
+
+
+.video-button {
+
+margin-top:25px;
+
+display:inline-block;
+
+background:#806040;
+
+color:white;
+
+padding:15px 30px;
+
+border-radius:30px;
+
+font-size:18px;
+
+}
+
+
+
+.video-card a {
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+
+
+.project-gallery {
+
+max-width:900px;
+
+margin:60px auto;
+
+}
+
+
+.project-gallery h2 {
+
+font-size:36px;
+
+color:#806040;
+
+}
+
+
+
+.gallery-card {
+
+background:#fffaf5;
+
+padding:25px;
+
+border-radius:35px;
+
+border:1px solid #ead8ca;
+
+}
+
+
+
+.gallery-card img {
+
+width:100%;
+
+border-radius:25px;
+
+}
