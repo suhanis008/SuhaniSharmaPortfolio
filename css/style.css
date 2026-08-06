@@ -2625,3 +2625,192 @@ video {
     max-height: 420px;
   }
 }
+
+/* =====================================================
+   VACUUM CLEANER PAGE
+   File: art/origami/original/vaccuum_cleaner.html
+   ===================================================== */
+
+.vacuum-hero-image img {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 22px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  box-shadow: 0 12px 26px rgba(80, 60, 40, 0.14);
+  margin: 0 auto;
+}
+
+.vacuum-gallery .origami-media-card img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  object-position: center;
+  background: #f7eee8;
+  margin: 0 auto;
+}
+
+.vacuum-gallery .origami-media-card figcaption {
+  text-align: center;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .vacuum-gallery .origami-media-card img {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .vacuum-hero-image img {
+    max-width: 100%;
+  }
+
+  .vacuum-gallery .origami-media-card img {
+    height: auto;
+    max-height: 420px;
+  }
+}
+
+/* =====================================================
+   ORIGAMI INDEX PAGE
+   File: art/origami/index.html
+   ===================================================== */
+
+.origami-index-page {
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 18px 0 90px;
+}
+
+.origami-index-hero {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(226, 213, 201, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 20px 46px rgba(120, 90, 70, 0.10);
+  padding: 42px;
+  margin-bottom: 28px;
+}
+
+.origami-index-hero h1 {
+  margin: 0 0 18px;
+  color: var(--brown);
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  line-height: 1;
+}
+
+.origami-index-hero p {
+  max-width: 780px;
+  color: #5f5a57;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.origami-index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.origami-index-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(226, 213, 201, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 16px 38px rgba(120, 90, 70, 0.08);
+  padding: 18px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.origami-index-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(120, 90, 70, 0.13);
+  border-color: rgba(167, 137, 104, 0.45);
+}
+
+.origami-index-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 22px;
+  object-fit: cover;
+  object-position: center;
+  background: #f7eee8;
+  margin-bottom: 20px;
+}
+
+.origami-index-card-text {
+  padding: 4px 6px 10px;
+}
+
+.origami-index-card-text p {
+  margin: 0 0 8px;
+  color: #a78968;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.origami-index-card-text h2 {
+  margin: 0 0 10px;
+  color: var(--brown);
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+
+.origami-index-card-text span {
+  display: block;
+  color: #5f5a57;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 850px) {
+  .origami-index-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .origami-index-page {
+    width: min(100% - 24px, 1120px);
+    padding: 18px 0 70px;
+  }
+
+  .origami-index-hero {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .origami-index-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .origami-index-hero p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .origami-index-card {
+    border-radius: 24px;
+  }
+
+  .origami-index-card img {
+    border-radius: 18px;
+  }
+
+  .origami-index-card-text h2 {
+    font-size: 1.7rem;
+  }
+}
